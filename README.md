@@ -38,7 +38,7 @@ src="https://cardivo.vercel.app/api?name=X%20BOT%20MD%20V1&description=🥂THE%2
 -----------
 ----------
 
-<div align="center"><br> <img src="https://profile-counter.glitch.me/X-BOT-MD/count.svg" /><br>SILENT-SOBX-MD-V2</div>
+<div align="center"><br> <img src="https://profile-counter.glitch.me/X-BOT-MD/count.svg" /><br>X-BOT-MD-V1</div>
 
 ------------
 
