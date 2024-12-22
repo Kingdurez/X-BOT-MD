@@ -134,7 +134,7 @@ src="https://cardivo.vercel.app/api?name=X%20BOT%20MD%20V1&description=🥂THE%2
 ----------
 
 <p align="center">
-<a href="https://webpair-mega-1-7m6u.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/GET SESSION ID:-black?style=for-the-badge&logo=render"></a>
+<a href="https://x-bot-md-session.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/GET SESSION ID:-black?style=for-the-badge&logo=render"></a>
 <p/>
 
 ----------
