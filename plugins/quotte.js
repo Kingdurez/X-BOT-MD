@@ -10,10 +10,10 @@ cmd({
 },
 async (conn, mek, m, { from, reply }) => {
     try {
-        const response = await axios.get('https://api.quotable.io/random');
+        const response = await axios.get('https://favqs.com/api/qotd');
         const quote = response.data;
         const message = `
-💬 "${quote.content}"
+💬 "${quote.body}"
 - ${quote.author}
 *QUOTES BY X-BOT MD*
         `;
