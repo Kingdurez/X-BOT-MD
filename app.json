@@ -123,7 +123,23 @@
       "description": "you can true or false it.",
       "required": true,
       "value": "false"
+    },
+    "ALWAYS_ONLINE": {
+      "description": "make it true if you want to show always online.",
+      "required": false,
+      "value": "false"
+    }, 
+    "FAKE_TYPING": {
+      "description": "make it true if you want to show fake typing.",
+      "required": false,
+      "value": "false"
+    }, 
+    "CURRENT_STATUS": {
+      "description": "make it true if you to show your reail last seen.",
+      "required": false,
+      "value": "false"
     }
+    
 
 
 },
