@@ -11,7 +11,7 @@ cmd({
 async (conn, mek, m, { from, reply }) => {
     try {
         const response = await axios.get('https://favqs.com/api/qotd');
-        const quote = response.data;
+        const quote = response.data.quote;
         const message = `
 💬 "${quote.body}"
 - ${quote.author}
