@@ -2,7 +2,7 @@ const axios = require('axios');
 const { cmd } = require('../command');
 
 cmd({
-    pattern: "quote2",
+    pattern: "quote",
     desc: "Get a random inspiring quote.",
     category: "fun",
     react: "💬",
