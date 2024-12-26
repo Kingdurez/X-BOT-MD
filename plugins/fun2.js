@@ -1,33 +1,7 @@
 const axios = require('axios');
 const { cmd } = require('../command');
 
-cmd({
-    pattern: "facts",
-    desc: "🧠 Get a random fun fact",
-    react: "😝",
-    category: "other",
-    filename: __filename
-},
-async (conn, mek, m, { from, q, reply }) => {
-    try {
-        const url = 'https://nekos.life/api/v2/fact';  // API for random facts
-        const response = await axios.get(url);
-        const facts = response.data.fact;
 
-        const facts = `
-  *X-BOT-MD RANDOM FACT*
-
-${fact}
-
-
-`;
-
-        return reply(funFact);
-    } catch (e) {
-        console.log(e);
-        return reply("⚠️ An error occurred while fetching a fun fact. Please try again later🤕.");
-    }
-});
 
 cmd({
     pattern: "joke2",
