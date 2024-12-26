@@ -38,13 +38,13 @@ cmd({
 },
 async (conn, mek, m, { from, q, reply }) => {
     try {
-        const url = 'https://v2.jokeapi.dev/joke/Any?type=single"';  // API for random jokes
+        const url = 'https://v2.jokeapi.dev/joke/Any?type=single';  // API for random jokes
         const response = await axios.get(url);
-        const joke = response.data;
+        const joke = response.data.joke;
         const jokeMessage = `
   *As requested* 
-*${joke.joke}*
-${Category.category} 😄
+*${joke}*
+*CATEGORY* ${category} 😄
 > *POWERED BY X-BOT-MD*
 `;
         return reply(jokeMessage);
@@ -65,7 +65,7 @@ async (conn, mek, m, { from, q, reply }) => {
     try {
         const url = 'https://api.popcat.xyz/pickuplines';  // API for random rizz
         const response = await axios.get(url);
-        const pickupline = response.data;
+        const { pickupline, contributor } = data;
 
         const message = `
   *X-BOT-MD RANDOM PICKUPLINE*
@@ -124,7 +124,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const truthQuestion = `
   *X-BOT-MD RANDOM TRUTH*
 
-${truthQuestion}
+${truth}
 
 
 `;
@@ -151,7 +151,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const dareChallenge = `
   *X-BOT-MD RANDOM DARE*
 
-${dareChallenge}
+${dare}
 
 
 `;
