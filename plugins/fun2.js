@@ -1,32 +1,6 @@
 const axios = require('axios');
 const { cmd } = require('../command');
 
-
-
-cmd({
-    pattern: "joke2",
-    desc: "😂 Get a random joke",
-    react: "🤣",
-    category: "random",
-    filename: __filename
-},
-async (conn, mek, m, { from, q, reply }) => {
-    try {
-        const url = 'https://v2.jokeapi.dev/joke/Any?type=single"';  // API for random jokes
-        const response = await axios.get(url);
-        const joke = response.data;
-        const jokeMessage = `
-  *As requested* 
-*${joke.joke}*
-${Category.category} 😄
-> *POWERED BY X-BOT-MD*
-`;
-        return reply(jokeMessage);
-    } catch (e) {
-        console.log(e);
-        return reply("⚠️ Couldn't fetch a joke right now. Please try again later.");
-    }
-});
 cmd({
     pattern: "rizz",
     desc: "Get a random pickup line",
