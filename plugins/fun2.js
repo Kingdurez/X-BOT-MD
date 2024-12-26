@@ -1,4 +1,5 @@
 const axios = require('axios');
+const fetch = require('node-fetch');
 const { cmd } = require('../command');
 
 cmd({
@@ -63,24 +64,26 @@ cmd({
 },
 async (conn, mek, m, { from, q, reply }) => {
     try {
-        const url = 'https://api.popcat.xyz/pickuplines';  // API for random rizz
-        const response = await axios.get(url);
-        const { pickupline, contributor } = data;
+        const apiUrl = "https://api.popcat.xyz/pickuplines";
+      const response = await fetch(apiUrl);
 
-        const message = `
-  *X-BOT-MD RANDOM PICKUPLINE*
+      if (!response.ok) {
+        return await m.send(
+          `*_Error: ${response.status} ${response.statusText}_*`
+        );
+      }
 
-${pickupline}
+      const data = await response.json();
+      const { pickupline, contributor } = data;
 
+      const message = `${pickupline}`;
 
-`;
-
-        return reply(message);
+      await m.send(message);
     } catch (e) {
-        console.log(e);
-        return reply("⚠️ An error occurred while fetching pickupline. Please try again later🤕.");
+      await m.error(`${e}\n\ncommand: rizz`, e);
     }
-});
+  }
+);
 cmd({
     pattern: "question",
     desc: "Get a random question",
