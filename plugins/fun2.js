@@ -1,5 +1,4 @@
 const axios = require('axios');
-const fetch = require('node-fetch');
 const { cmd } = require('../command');
 
 cmd({
@@ -41,11 +40,11 @@ async (conn, mek, m, { from, q, reply }) => {
     try {
         const url = 'https://v2.jokeapi.dev/joke/Any?type=single';  // API for random jokes
         const response = await axios.get(url);
-        const joke = response.data.joke;
+        const joke = response.data;
         const jokeMessage = `
   *As requested* 
-*${joke}*
-*CATEGORY* ${category} 😄
+*${joke.joke}*
+*CATEGORY* ${joke.category} 😄
 > *POWERED BY X-BOT-MD*
 `;
         return reply(jokeMessage);
@@ -64,26 +63,24 @@ cmd({
 },
 async (conn, mek, m, { from, q, reply }) => {
     try {
-        const apiUrl = "https://api.popcat.xyz/pickuplines";
-      const response = await fetch(apiUrl);
+        const url = 'https://api.popcat.xyz/pickuplines';  // API for random rizz
+        const response = await axios.get(url);
+        const pickupline = response.data.pickupline;
 
-      if (!response.ok) {
-        return await m.send(
-          `*_Error: ${response.status} ${response.statusText}_*`
-        );
-      }
+        const message = `
+  *X-BOT-MD RANDOM PICKUPLINE*
 
-      const data = await response.json();
-      const { pickupline, contributor } = data;
+${pickupline}
 
-      const message = `${pickupline}`;
 
-      await m.send(message);
+`;
+
+        return reply(message);
     } catch (e) {
-      await m.error(`${e}\n\ncommand: rizz`, e);
+        console.log(e);
+        return reply("⚠️ An error occurred while fetching pickupline. Please try again later🤕.");
     }
-  }
-);
+});
 cmd({
     pattern: "question",
     desc: "Get a random question",
@@ -95,7 +92,7 @@ async (conn, mek, m, { from, q, reply }) => {
     try {
         const url = 'https://opentdb.com/api.php?amount=1&type=multiple';  // API for random question 
         const response = await axios.get(url);
-        const question = data.results[0].question;
+        const question = response.data.results[0].question;
 
         const qMessage = `
   *X-BOT-MD RANDOM QUESTION*
@@ -122,7 +119,7 @@ async (conn, mek, m, { from, q, reply }) => {
     try {
         const url = 'https://api.truthordarebot.xyz/v1/truth';  // API for random trurh
         const response = await axios.get(url);
-        const truth = data.question;
+        const truth = response.data.question;
 
         const truthQuestion = `
   *X-BOT-MD RANDOM TRUTH*
@@ -149,7 +146,7 @@ async (conn, mek, m, { from, q, reply }) => {
     try {
         const url = 'https://api.truthordarebot.xyz/v1/dare';  // API for random dare
         const response = await axios.get(url);
-        const dare = data.question;
+        const dare = response.data.question;
 
         const dareChallenge = `
   *X-BOT-MD RANDOM DARE*
@@ -165,4 +162,4 @@ ${dare}
         return reply("⚠️ An error occurred while fetching a dare. Please try again later🤕.");
     }
 });
- 
+
