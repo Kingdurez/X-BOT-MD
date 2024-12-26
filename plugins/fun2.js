@@ -41,7 +41,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const question = data.results[0].question;
 
-        const question = `
+        const qmessage = `
   *X-BOT-MD RANDOM QUESTION*
 
 ${question}
@@ -68,7 +68,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const truthQuestion = data.question;
 
-        const truthQuestion = `
+        const truthmessage = `
   *X-BOT-MD RANDOM TRUTH*
 
 ${truthQuestion}
@@ -95,7 +95,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const dareChallenge = data.question;
 
-        const dareChallenge = `
+        const daremessage = `
   *X-BOT-MD RANDOM DARE*
 
 ${dareChallenge}
