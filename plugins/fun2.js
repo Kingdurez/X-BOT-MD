@@ -12,9 +12,9 @@ async (conn, mek, m, { from, q, reply }) => {
     try {
         const url = 'https://nekos.life/api/v2/fact';  // API for random facts
         const response = await axios.get(url);
-        const fact = response.data.fact;
+        const facts = response.data.fact;
 
-        const fact = `
+        const facts = `
   *X-BOT-MD RANDOM FACT*
 
 ${fact}
