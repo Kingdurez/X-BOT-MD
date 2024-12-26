@@ -46,7 +46,7 @@ let madeMenu = `*╭─────────────────❒⁠⁠
 
 
 *╭───────────────❒⁠⁠⁠⁠*
-*│*https://github.com/Mek-d1/X-BOT-MD*
+*│ *https://github.com/Mek-d1/X-BOT-MD*
 *┕───────────────❒*
 
 *╭───────────────❒⁠⁠⁠⁠*
