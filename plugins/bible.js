@@ -16,8 +16,11 @@ let data = await fetchJson(`https://bible-api.com/${q}`)
 return reply(` 
  X-BOT-MD BIBLE VERSE 
  
- READIDNG= ${data.text}
- REFERENCE= ${data.reference} 
+ 
+ REFERENCE❤️ ${data.reference}
+ READIDNG💐 ${data.text}   
+
+ 
  > ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅx`)
 }catch(e){
 console.log(e)
