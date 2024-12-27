@@ -24,6 +24,7 @@ module.exports = {
     FAKE_TYPING: process.env.FAKE_TYPING || "false",
     ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
     CURRENT_STATUS: process.env.CURRENT_STATUS || "false",
+    READ_CMD: process.env.READ_CMD || "true",
     AUTO_REACT: process.env.AUTO_REACT || "false",
     HEART_REACT: process.env.HEART_REACT || "false",
     OWNER_REACT: process.env.OWNER_REACT || "true",
