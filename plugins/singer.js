@@ -16,7 +16,7 @@ let data = await fetchJson(`https://itzpire.com/search/lyrics?query=${q}`)
 return reply(` 
  X-BOT-MD LYRICS FINDER 
  
- *ALBUM* ${data.data.album}
+ *STATUS* ${data.status}
  *TITLE* ${data.data.title} 
         *SONG* 
       ${data.data.lyrics}
