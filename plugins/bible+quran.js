@@ -14,14 +14,17 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 let data = await fetchJson(`https://bible-api.com/${q}`)
 return reply(` 
- *X-BOT-MD BIBLE VERSE* 
+ *[ •  BIBLE - VERSES ‎ • ]*
  
+ *╭┈───────────────•*
+ *│  ◦* *REFERENCE*❤️ ${data.reference}
  
- *REFERENCE*❤️ ${data.reference}
- *READIDNG*💐 ${data.text}   
-
+ *│  ◦* *VERSE*💐 ${data.text}    
+ *╰┈───────────────•*
  
- > ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅx`)
+  *•────────────•⟢*
+  > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅx
+  *•────────────•⟢*`)
 }catch(e){
 console.log(e)
 reply(`${e}`)
@@ -40,25 +43,26 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 let data = await fetchJson(`https://quranapi.pages.dev/api/${q}.json`)
 return reply(` 
- *X-BOT-MD QURAN* 
+ *[ • X-BOT-MD QURAN - VERSES ‎ • ]*
  
+ *╭┈───────────────•*
+ *│  ◦* *SURAH-NAME*❤️  ${data.surahName}
  
- *SURAH-NAME*❤️  ${data.surahName}
+ *│  ◦* *SURAH-NAME-EN*💐  ${data.surahNameTranslation} 
  
- *SURAH-NAME-EN*💐  ${data.surahNameTranslation} 
+ *│  ◦* *SURAH-NUMBER*❤️  ${data.surahNo}
+
+ *│  ◦* *AYAH-NUMBER*❤️  ${data.ayahNo}
+
+ *│  ◦* *ENGLISH-TRT*❤️  ${data.english}
+
+
+ *│  ◦* *ARABIC-TRT*❤️  ${data.arabic1}
+ *╰┈───────────────•*
  
- *SURAH-NUMBER*❤️  ${data.surahNo}
-
- *AYAH-NUMBER*❤️  ${data.ayahNo}
-
- *ENGLISH-TRT*❤️  ${data.english}
-
- *BENGALI-TRT*❤️  ${data.bengali}
-
- *ARABIC-TRT*❤️  ${data.arabic1}
-
- 
- > ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅx`)
+ *•────────────•⟢*
+ > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅx
+ *•────────────•⟢*`)
 }catch(e){
 console.log(e)
 reply(`${e}`)
