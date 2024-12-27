@@ -30,9 +30,9 @@ reply(`${e}`)
 
 
 cmd({
-    pattern: "bible",
-    react: "🙏🏾",
-    desc: "get bible verses.",
+    pattern: "quran",
+    react: "🤍",
+    desc: "get quran verses.",
     category: "fun",
     filename: __filename
 },
