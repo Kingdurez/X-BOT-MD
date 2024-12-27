@@ -5,7 +5,7 @@ cmd({
     pattern: "facts",
     desc: "🧠 Get a random fun fact",
     react: "😝",
-    category: "other",
+    category: "fun",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
@@ -33,7 +33,7 @@ cmd({
     pattern: "joke2",
     desc: "😂 Get a random joke",
     react: "🤣",
-    category: "random",
+    category: "fun",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
@@ -58,7 +58,7 @@ cmd({
     pattern: "rizz",
     desc: "Get a random pickup line",
     react: "🫠",
-    category: "fun",
+    category: "random",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
@@ -112,7 +112,7 @@ cmd({
     pattern: "truth",
     desc: "Get a random truth question",
     react: "🌚",
-    category: "other",
+    category: "fun",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
@@ -139,7 +139,7 @@ cmd({
     pattern: "dare",
     desc: "Get a random date question",
     react: "🌝",
-    category: "other",
+    category: "fun",
     filename: __filename
 },
 async (conn, mek, m, { from, q, reply }) => {
@@ -162,4 +162,31 @@ ${dare}
         return reply("⚠️ An error occurred while fetching a dare. Please try again later🤕.");
     }
 });
+cmd({
+    pattern: "why",
+    desc: "Get a random why question",
+    react: "🤔",
+    category: "fun",
+    filename: __filename
+},
+async (conn, mek, m, { from, q, reply }) => {
+    try {
+        const url = 'https:/nekos.life//api/v2/why';  // API for random why
+        const response = await axios.get(url);
+        const why = response.data.why;
 
+        const whyMessage = `
+  *X-BOT-MD RANDOM WHY*
+
+${why}
+
+
+`;
+
+        return reply(whyMessage);
+    } catch (e) {
+        console.log(e);
+        return reply("⚠️ An error occurred while fetching a why question. Please try again later🤕.");
+    }
+});
+    
