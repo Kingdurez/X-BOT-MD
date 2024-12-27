@@ -138,6 +138,11 @@
       "description": "make it true if you to show your reail last seen.",
       "required": false,
       "value": "false"
+    },
+    "READ_CMD": {
+      "description": "make it true if you want bot auto read commands",
+      "required": true,
+      "value": "true"
     }
     
 
