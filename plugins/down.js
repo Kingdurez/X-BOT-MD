@@ -27,11 +27,8 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/twitter?url=${q}`)
         reply("*X-BOT-MD TWITTER VIDEO DOWNLOADING...*")
-        //send video (hd,sd)
-        await conn.sendMessage(from, { video: { url: data.data.BK9.HD }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })
-        await conn.sendMessage(from, { video: { url: data.data.BK9.HD }, mimetype: "video/mp4", caption: `- SD \n\n ${yourName}` }, { quoted: mek })  
-        //send audio    
-        await conn.sendMessage(from, { audio: { url: data.data.BK9.audio }, mimetype: "audio/mpeg" }, { quoted: mek })  
+        //send video hd
+        await conn.sendMessage(from, { video: { url: data.data.BK9.HD }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })  
     } catch (e) {
         console.log(e)
         reply(`${e}`)
@@ -53,10 +50,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         //fetch data from api  
         let data = await fetchJson(`${baseUrl}/alldownload?url=${q}`)
         reply("*X-BOT-MD ALL SOCIAL  DOWNLOADING...🚀*")
-        await conn.sendMessage(from, { video: { url: data.data.BK9.high }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })
-        await conn.sendMessage(from, { video: { url: data.data.BK9.low }, mimetype: "video/mp4", caption: `- SD \n\n ${yourName}` }, { quoted: mek })  
-        //send audio    
-        await conn.sendMessage(from, { audio: { url: data.data.BK9.audio }, mimetype: "audio/mpeg" }, { quoted: mek })  
+        await conn.sendMessage(from, { video: { url: data.data.BK9.high }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })  
     } catch (e) {
         console.log(e)
         reply(`${e}`)
