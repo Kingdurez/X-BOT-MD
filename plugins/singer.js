@@ -17,7 +17,7 @@ if (!q) {
         return await m.send("*_Please provide a song name!_*");
       }
 
-      const apiUrl = `https://itzpire.com/search/lyrics?query=${encodeURIComponent(q)}`;
+      const apiUrl = `https://itzpire.com/search/lyrics?query=${q}`;
       const response = await fetch(apiUrl);
 
       if (!response.ok) {
