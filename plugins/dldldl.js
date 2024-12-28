@@ -12,24 +12,19 @@ cmd({
     try {
         const url = `https://itzpire.com/stalk/whatsapp-channel?url=${q}`;  // API for random facts
         const response = await axios.get(url);
-        const {
-        img,
-        title,
-        followers,
-        description,
-      } = response.data.data;
+        const data = response.data.data;
       
       const caption = `
 *WhatsApp Channel Information*
 
-*Title:* ${title}
-*Followers:* ${followers}
-*Description:* ${description || "No description provided"}
+*Title:* ${data.title}
+*Followers:* ${data.followers}
+*Description:* ${data.description || "No description provided"}
 
 \t*X-BOT-MD WA STALKER*
 `;
 
-    await m.bot.sendFromUrl(m.from, img, caption, m, {}, "image");
+    return reply(caption);
     } catch (e) {
     console.log(e);
         return reply("⚠️ An error occurred while fetching data. Please try again later🤕.");
