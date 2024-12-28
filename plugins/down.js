@@ -25,7 +25,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if (!q && !q.startsWith("https://")) return reply("give me twitter url")
         //fetch data from api  
-        let data = await fetchJson(`${baseUrl}/twitter?url=${q}`)
+        let data = await fetchJson(`https://bk9.fun/download/twitter?url=${q}`)
         reply("*X-BOT-MD TWITTER VIDEO DOWNLOADING...*")
         //send video hd
         await conn.sendMessage(from, { video: { url: data.data.BK9.HD }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })  
@@ -48,7 +48,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
     try {
         if (!q && !q.startsWith("https://")) return reply("give me a url")
         //fetch data from api  
-        let data = await fetchJson(`${baseUrl}/alldownload?url=${q}`)
+        let data = await fetchJson(`https://bk9.fun/download/alldownload?url=${q}`)
         reply("*X-BOT-MD ALL SOCIAL  DOWNLOADING...🚀*")
         await conn.sendMessage(from, { video: { url: data.data.BK9.high }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })  
     } catch (e) {
