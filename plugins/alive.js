@@ -54,7 +54,7 @@ cmd({
     });
     await _0x19d98b.sendMessage(_0xc4ffe9, {
       'audio': {
-        'url': "https://files.catbox.moe/1gshkv.mp3"
+        'url': "https://raw.githubusercontent.com/Mek-d1/X-DATABASE/refs/heads/main/VOICE-DATA/xmdbot.mp3"
       },
       'mimetype': "audio/mpeg",
       'ptt': true,
