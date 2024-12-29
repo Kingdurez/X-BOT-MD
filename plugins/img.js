@@ -42,9 +42,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             await conn.sendMessage(from, {
                 image: buffer,
                 caption: `
-*💗Image ${i + 1} from your search!💗*
 
- *here are your searches 🚀*
+ *here are your result ${i + 1} out 5 from your search ~${searchQuery}~ 🚀*
 
 > ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅx`
 }, { quoted: mek });
