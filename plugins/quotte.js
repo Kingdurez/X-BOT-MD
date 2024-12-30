@@ -52,7 +52,7 @@ cmd({
 },
 async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let res = await axios.get(`https://api.davidcyriltech.my.id/ssweb?url=${q}`;
+let res = await axios.get(`https://api.davidcyriltech.my.id/ssweb?url=${q}`)
 let wm = ` ~here's your screenshot~
 
 > *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ x-ʙᴏᴛ-ᴍᴅ..*`
@@ -61,4 +61,4 @@ await conn.sendMessage(from, { image: { url: res.data.screenshotUrl }, caption: 
 reply(cants)
 console.log(e)
 }
-})
+});
