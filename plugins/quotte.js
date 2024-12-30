@@ -41,3 +41,24 @@ console.log(e)
 reply(`${e}`)
 }
 });
+cmd({
+    pattern: "ss",
+    alias: ["ssweb"],
+    react: '👽',
+    desc: "Download ss of a given link.",
+    category: "other",
+    use: '.ss <link>',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+let res = await axios.get(`https://api.davidcyriltech.my.id/ssweb?url=${q}`;
+let wm = ` ~here's your screenshot~
+
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ x-ʙᴏᴛ-ᴍᴅ..*`
+await conn.sendMessage(from, { image: { url: res.data.screenshotUrl }, caption: wm}, { quoted: mek })
+} catch (e) {
+reply(cants)
+console.log(e)
+}
+})
