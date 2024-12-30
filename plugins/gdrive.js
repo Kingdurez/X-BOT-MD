@@ -29,7 +29,7 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
         //fetch data from api  
         let data = await fetchJson(`https://bk9.fun/download/gdrive?url=${q}`)
         reply("*PLEASE WAIT ☞x-ʙᴏᴛ-ᴍᴅ☜⁠ *")
-        await conn.sendMessage(from, { document: { url: data.data.BK9.downloadUrl }, fileName: data.data.BK9.fileName, mimetype: data.data.BK9.mimetype, caption: `${data.BK9.fileName}\n\n${yourName}` }, { quoted: mek })                                                                                                                 
+        await conn.sendMessage(from, { document: { url: data.BK9.downloadUrl }, fileName: data.BK9.fileName, mimetype: data.BK9.mimetype, caption: `${data.BK9.fileName}\n\n${yourName}` }, { quoted: mek })                                                                                                                 
     } catch (e) {
         console.log(e)
         reply(`${e}`)
