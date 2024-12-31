@@ -66,6 +66,7 @@
         "google-it": "^1.6.4",
         "google-tts-api": "^2.0.2",
         "imaginesdk": "latest",
+        "human-readable":"0.2.1", 
         "imgur": "latest",
         "is-standard-emoji": "1.0.0",
         "jimp": "0.16.1",
