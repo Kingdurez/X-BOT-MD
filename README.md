@@ -15,7 +15,7 @@
 ------------
 
 <img align="center" height="auto"
-src="https://cardivo.vercel.app/api?name=X%20BOT%20MD%20V1&description=🥂THE%20WORLD%20BEST%20WHATSAPP%20BOT%★%20CREATED%20BY%20MEK%20D1%20WP%20MM%20DAVID%20X%20OWNER%20XBOT%20%20AND%20XBOT%20MD&image=https://i.imgur.com/rzPIk3t.jpeg?v=4&backgroundColor=%23ecf0f1&github=Mek-d1&pattern=leaf&colorPattern=%23eaeaea"/>
+src="https://cardivo.vercel.app/api?name=X%20BOT%20MD%20V1&description=🥂THE%20WORLD%20BEST%20WHATSAPP%20BOT%★%20CREATED%20BY%20MEK%20D1%20WP%20MM%20DAVID%20X%20OWNER%20XBOT%20%20AND%20XBOT%20MD&image=https://files.catbox.moe/eyqkok.jpg?v=4&backgroundColor=%23ecf0f1&github=Mek-d1&pattern=leaf&colorPattern=%23eaeaea"/>
 
 <br>
 
